@@ -92,6 +92,8 @@ const DMS_SITES = [
   { id: "darty", name: "Darty", domains: ["darty.com", "darty.fr"], detect: false },
   // Thème sombre du site ([data-theme=dark] sur <html>) ; menus déroulants natifs corrigés en CSS
   { id: "leboncoin", name: "leboncoin", domains: ["leboncoin.fr"], htmlAttr: { name: "data-theme", value: "dark" } },
+  // Tailscale : connexion (login.tailscale.com), console d'administration et site public
+  { id: "tailscale", name: "Tailscale", domains: ["tailscale.com"] },
   // Forum PPBO (PunBB) : inversion, avec retouches (cherché avant le reste du site)
   {
     id: "ppbo-forum",
