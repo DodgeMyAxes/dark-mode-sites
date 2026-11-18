@@ -162,7 +162,7 @@
       "all_frames": true
     },
     {
-      "matches": ["*://192.168.1.1/*"],
+      "matches": ["*://192.168.1.1/*", "*://livebox/*"],
       "css": ["content/dark.css"],
       "js": ["sites.js", "content/toggle.js"],
       "run_at": "document_start",
