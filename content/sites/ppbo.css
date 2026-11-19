@@ -247,3 +247,20 @@ html:not(.dms-off) :is(#jetonsEncours, #nbJackpot) {
   color: var(--dms-link) !important;
   text-shadow: none !important;
 }
+
+/* Boutique du casino : lignes alternées grises, prix verts, liens « Achat », titre rouge */
+html:not(.dms-off) [style*="c6d5db" i] tr[bgcolor="#e1e1e1" i] {
+  background-color: var(--dms-field) !important;
+}
+
+html:not(.dms-off) [style*="c6d5db" i] [style*="#080"] {
+  color: #7fd47f !important;
+}
+
+html:not(.dms-off) [style*="c6d5db" i] a:not([style*="color"]) {
+  color: var(--dms-link) !important;
+}
+
+html:not(.dms-off) [style*="c6d5db" i] h1[style*="#b51021" i] {
+  color: #ff8a80 !important;
+}
