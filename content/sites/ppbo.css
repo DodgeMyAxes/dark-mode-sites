@@ -265,16 +265,16 @@ html:not(.dms-off) [style*="c6d5db" i] h1[style*="#b51021" i] {
   color: #ff8a80 !important;
 }
 
-/* --- Tournoi de l'arène : cadres blancs « Tes Matchs », « Classement » --- */
+/* --- Tournois de l'arène : cadres blancs (« Tes Matchs », « Classement », bulles du déroulement et du règlement) --- */
 
 /* Fond blanc sous les coins transparents de l'image : l'inversion le rend sombre */
-html:not(.dms-off) [style*="matchs_tableau"] {
+html:not(.dms-off) :is([style*="matchs_tableau"], [style*="tournoi_bulle"]) {
   position: relative;
   isolation: isolate;
   background-color: #fff !important;
 }
 
-html:not(.dms-off) [style*="matchs_tableau"]::before {
+html:not(.dms-off) :is([style*="matchs_tableau"], [style*="tournoi_bulle"])::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -284,7 +284,7 @@ html:not(.dms-off) [style*="matchs_tableau"]::before {
 }
 
 /* Ligne survolée : vert pâle posé en JS */
-html:not(.dms-off) [style*="matchs_tableau"] tr[style*="202, 234, 198"] {
+html:not(.dms-off) :is([style*="matchs_tableau"], [style*="tournoi_bulle"]) tr[style*="202, 234, 198"] {
   background-color: var(--dms-blue-2) !important;
 }
 
