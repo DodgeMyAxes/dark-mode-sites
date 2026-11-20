@@ -264,3 +264,56 @@ html:not(.dms-off) [style*="c6d5db" i] a:not([style*="color"]) {
 html:not(.dms-off) [style*="c6d5db" i] h1[style*="#b51021" i] {
   color: #ff8a80 !important;
 }
+
+/* --- Tournoi de l'arène : cadres blancs « Tes Matchs », « Classement » --- */
+
+/* Fond blanc sous les coins transparents de l'image : l'inversion le rend sombre */
+html:not(.dms-off) [style*="matchs_tableau"] {
+  position: relative;
+  isolation: isolate;
+  background-color: #fff !important;
+}
+
+html:not(.dms-off) [style*="matchs_tableau"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  backdrop-filter: invert(0.88) hue-rotate(180deg);
+  pointer-events: none;
+}
+
+/* Ligne survolée : vert pâle posé en JS */
+html:not(.dms-off) [style*="matchs_tableau"] tr[style*="202, 234, 198"] {
+  background-color: var(--dms-blue-2) !important;
+}
+
+/* --- Chat (iframe /chat2/) : texte gris foncé d'origine --- */
+
+html:not(.dms-off) .chat :is(.messages, .onlineusers) {
+  border-color: var(--dms-border) !important;
+}
+
+html:not(.dms-off) .chat ::-webkit-scrollbar-track {
+  background: var(--dms-field) !important;
+}
+
+html:not(.dms-off) .chat :is(.message, p, a, a.sender, p.onlineuser) {
+  color: var(--dms-text) !important;
+}
+
+html:not(.dms-off) .chat span[style*="#7a878c"] {
+  color: var(--dms-muted) !important;
+}
+
+html:not(.dms-off) .chat :is(a.senderMod, p.onlineuserMod) {
+  color: #ff8a80 !important;
+}
+
+html:not(.dms-off) .chat p.onlineuserHelper {
+  color: var(--dms-link) !important;
+}
+
+html:not(.dms-off) .chat_content > div[style*="#dddddd"] {
+  background-color: var(--dms-page) !important;
+}
