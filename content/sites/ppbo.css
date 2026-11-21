@@ -341,3 +341,36 @@ html:not(.dms-off) [style*="rgb(215,255,200)"] {
 html:not(.dms-off) [style*="rgb(185,240,165)"] {
   background-color: #1a3a22 !important;
 }
+
+/* --- Listes déroulantes du site (.pokdropdown : choix du PKM à inscrire au tournoi…) --- */
+
+/* Le cadre isolé qui la contient passe devant les cadres suivants, sinon la liste ouverte est cachée dessous */
+html:not(.dms-off) :is(#cadreInfos, #bg_arene, #bg_text_arene, [style*="fiche-pkm.png"], [style*="bg_equip.png"], [style*="bg_pok_equip.png"], [style*="rectangle_"], [style*="bg_histo.png"], [style*="bg_bloc_dr.png"], [style*="bloc_pkm_mis_en_vente"], [style*="bloc_vos_pok_v"], [style*="bloc_vos_pk_vente"], [style*="bloc1_Gare"], [style*="bg_inf_dress"], [style*="bg_sn_clan"], [style*="bg_sn_equi"], #bloc_pok2, div.pseud_choi, [style*="matchs_tableau"], [style*="tournoi_bulle"]):has(.pokdropdown) {
+  z-index: 1;
+}
+
+html:not(.dms-off) .pokdropdown dt a {
+  background: var(--dms-field) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e6e6e6' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 6px center !important;
+  border-color: var(--dms-border) !important;
+}
+
+html:not(.dms-off) .pokdropdown :is(dd ul, li.pokdd-searchli) {
+  background: var(--dms-surface) !important;
+  border-color: var(--dms-border) !important;
+}
+
+html:not(.dms-off) .pokdropdown a,
+html:not(.dms-off) .pokdropdown a:visited {
+  color: var(--dms-text) !important;
+}
+
+html:not(.dms-off) .pokdropdown :is(dd ul li a:hover, li.pokdd-active a) {
+  background-color: var(--dms-blue-2) !important;
+  color: var(--dms-text) !important;
+}
+
+html:not(.dms-off) .pokdropdown .pokdd-search {
+  background-color: var(--dms-field) !important;
+  border-color: var(--dms-border) !important;
+  color: var(--dms-text) !important;
+}
