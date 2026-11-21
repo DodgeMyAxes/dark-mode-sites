@@ -332,3 +332,12 @@ html:not(.dms-off) [style*="rgb(210,215,230)"] {
 html:not(.dms-off) [style*="rgb(85,145,190)"] a:not([style*="color"]) {
   color: var(--dms-link) !important;
 }
+
+/* Défis terminés : carte et ligne « Récompense » vert pâle */
+html:not(.dms-off) [style*="rgb(215,255,200)"] {
+  background-color: #1f4a2a !important;
+}
+
+html:not(.dms-off) [style*="rgb(185,240,165)"] {
+  background-color: #1a3a22 !important;
+}
