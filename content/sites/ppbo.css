@@ -149,6 +149,20 @@ html:not(.dms-off) :is(#cadreInfos, #bg_arene, #bg_text_arene, [style*="fiche-pk
   pointer-events: none;
 }
 
+/* Cadre du dresseur : image (fond_psd_2018.png) transparente en grande partie ; sans fond
+   propre, l'inversion y rendait clair le fond sombre de la colonne. Fond clair ici,
+   assombri par l'inversion comme le reste de l'image. */
+html:not(.dms-off) #cadreInfos {
+  background-color: #e4e7e9;
+  border-radius: 4px;
+}
+
+/* Icônes du cadre du dresseur sur fond blanc : atténuées et arrondies */
+html:not(.dms-off) #cadreInfos td a > img:not([src*="deco.png"]) {
+  filter: brightness(0.82);
+  border-radius: 4px;
+}
+
 /* Arène : le bandeau du titre, en haut de l'image, est déjà sombre */
 html:not(.dms-off) #bg_arene::before {
   top: 56px;
@@ -176,6 +190,34 @@ html:not(.dms-off) :is(#dhtmltooltip, #boxMessages, #colisee_global, #bloc_carte
   background: var(--dms-surface) !important;
   border-color: var(--dms-border) !important;
   color: var(--dms-text) !important;
+}
+
+/* Fenêtre des collections (Ajouter une collection, Favoris) et confirmation de suppression */
+html:not(.dms-off) :is(.modal-content, .modal-delete-collec, .modal-header) {
+  background: var(--dms-surface) !important;
+  border-color: var(--dms-border) !important;
+  color: var(--dms-text) !important;
+}
+
+html:not(.dms-off) :is(.modal-content, .modal-delete-collec) :is(h3, p, label, span) {
+  color: var(--dms-text) !important;
+}
+
+html:not(.dms-off) .modal-content .sort-item {
+  background: var(--dms-field) !important;
+}
+
+html:not(.dms-off) #collection-title {
+  background-color: var(--dms-field) !important;
+  border-color: var(--dms-border) !important;
+}
+
+html:not(.dms-off) #collection-title:focus {
+  background-color: var(--dms-blue) !important;
+}
+
+html:not(.dms-off) :is(#btn-Sauvegarder, #btn-Annuler, #confirm-delete, #cancel-delete) {
+  color: #111 !important;
 }
 
 html:not(.dms-off) #fondBoxMessages {
